@@ -30,7 +30,31 @@ client.on('message', msg => {
     msg.channel.send("I am the better bob!");
     msg.channel.send(bobrage);
   }
+
+  if (msg.member.id === '231820363212914689'){
+    const arg = msg.content.trim().split(/ +/g);
+  }
 });
 
 // Log our bot in
 client.login(token);
+
+//JUST SOME RANDOM INHERITANCE STUFF
+/*class ABC {
+  constructor(){
+
+  }
+
+  a(z) {
+    console.log(z);
+  }
+}
+
+class DEF extends ABC{
+  constructor(){
+    super();
+  }
+}
+
+let orenamae = new DEF();
+orenamae.a("helloworld");*/
