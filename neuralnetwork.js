@@ -1,20 +1,6 @@
 module.exports = class NeuralNetwork {
   constructor(){
-    this.bag = [];
-  }
 
-  bagOfWords(words){
-    var wordsLength = words.length;
-    var bagLength = this.bag.length;
-    let i=0
-    while(i<wordsLength){
-      if(this.bag.indexOf(words[i])==-1){
-        this.bag.push(words[i]);
-      }
-      i++;
-    }
-
-    console.log(words);
   }
 
   test(){

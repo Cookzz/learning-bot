@@ -7,8 +7,8 @@ const client = new Discord.Client();
 const ytdl = require('ytdl-core');
 
 //connect to neural network
-const neuralnetwork = require('./neuralnetwork.js');
-const network = new neuralnetwork();
+const WordLibrary = require('./wordlibrary.js');
+const library = new WorldLibrary();
 
 //load a token from an external js file
 const Token = require('./token.js');
@@ -39,7 +39,7 @@ client.on('message', msg => {
 
   else if (msg.member.id === '231820363212914689'){
     const discordMessage = msg.content.trim().split(/ +/g);
-    network.bagOfWords(discordMessage);
+    library.bagOfWords(discordMessage);
   }
 });
 

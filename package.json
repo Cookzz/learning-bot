@@ -18,6 +18,9 @@
   "homepage": "https://github.com/Cookzz/learning-bot#readme",
   "dependencies": {
     "discord.js": "^11.3.2",
+    "file": "^0.2.2",
+    "fs": "0.0.1-security",
+    "system": "^2.0.1",
     "ytdl-core": "^0.21.1"
   }
 }
