@@ -4,13 +4,14 @@ const Discord = require('discord.js');
 // Create an instance of a Discord client
 const client = new Discord.Client();
 
-// The token of your bot - https://discordapp.com/developers/applications/me
-const token = 'NDcwNTkxOTY5MTExMDQ4MTkz.DjYjXw.lmXMckefdHp8IztNLZZFmEjk1V0';
-
 const ytdl = require('ytdl-core');
 
 const neuralnetwork = require('./neuralnetwork.js');
 const network = new neuralnetwork();
+
+const Token = require('./token.js');
+const token = new Token();
+const tokenNo = token.returnToken();
 
 //custom emotes
 const bobrage = "<:bobrage:464489494570074112>";
@@ -24,7 +25,7 @@ client.on('ready', () => {
 
 client.on("error", function () {
   console.log("error!");
-	client.login(token);
+	client.login(tokenNo);
 });
 
 // Create an event listener for messages
@@ -41,7 +42,7 @@ client.on('message', msg => {
 });
 
 // Log our bot in
-client.login(token);
+client.login(tokenNo);
 
 //JUST SOME RANDOM INHERITANCE STUFF
 /*class ABC {

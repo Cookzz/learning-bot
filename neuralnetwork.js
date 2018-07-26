@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-class NeuralNetwork {
-  constructor(){
-
-  }
-
-  bagOfWords(...args){
-
-  }
-
-  test(){
-    console.log("IT WORKS!");
-  }
-}
-=======
 module.exports = class NeuralNetwork {
   constructor(){
     this.bag = [];
@@ -51,4 +36,3 @@ module.exports = class NeuralNetwork {
 
     THIS METHOD IS INEFFICIENT (IF THERE ARE 2> IN AN ARRAY, IT WILL BE CHECKED AGAIN)
 */
->>>>>>> subbranch
