@@ -9,6 +9,9 @@ const token = 'NDcwNTkxOTY5MTExMDQ4MTkz.DjYjXw.lmXMckefdHp8IztNLZZFmEjk1V0';
 
 const ytdl = require('ytdl-core');
 
+const neuralnetwork = require('./neuralnetwork.js');
+const network = new neuralnetwork();
+
 //custom emotes
 const bobrage = "<:bobrage:464489494570074112>";
 const estus = "<:estus:470297656854446081>";
@@ -31,8 +34,9 @@ client.on('message', msg => {
     msg.channel.send(bobrage);
   }
 
-  if (msg.member.id === '231820363212914689'){
-    const arg = msg.content.trim().split(/ +/g);
+  else if (msg.member.id === '231820363212914689'){
+    const discordMessage = msg.content.trim().split(/ +/g);
+    network.bagOfWords(discordMessage);
   }
 });
 
