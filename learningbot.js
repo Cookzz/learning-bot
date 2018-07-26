@@ -6,9 +6,11 @@ const client = new Discord.Client();
 
 const ytdl = require('ytdl-core');
 
+//connect to neural network
 const neuralnetwork = require('./neuralnetwork.js');
 const network = new neuralnetwork();
 
+//load a token from an external js file
 const Token = require('./token.js');
 const token = new Token();
 const tokenNo = token.returnToken();
